@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >  
+<suite name="Suite1" thread-count="1"" >
+  <test name="WeightWatchers">
+    <classes>
+       <class name="com.ww.testrunner.Test_Runner"/>
+    </classes>
+ </test>
+</suite>
