@@ -22,8 +22,7 @@ public class Step_Def {
 		
        driver=Common.getbrowser("Mozila",driver); 
 	  
-	    
-	}
+	    }
 
 	@When("^User in home weightwatchers page$")
 	public void user_in_home_weightwatchers_page() throws Throwable {

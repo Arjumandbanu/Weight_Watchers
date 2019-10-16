@@ -15,6 +15,6 @@ When User click on the first search result
 And User Verify that displayed location name matches with the name of the first searched
 And User Print TODAYs hours of operation from this location page
 Then User cloes the browser
-Examples:
-|Zipcode|
-|10011|
+	Examples:
+	|Zipcode|
+	|10011|
