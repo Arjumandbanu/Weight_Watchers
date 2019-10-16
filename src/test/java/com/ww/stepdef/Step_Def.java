@@ -53,12 +53,19 @@ public class Step_Def {
 
 	@When("^User click on Find a studio$")
 	public void user_click_on_Find_a_studio() throws Throwable {
-	
-		ob.getFind_a_StudioButton().click();	
+		try {	ob.getFind_a_StudioButton().click();	
+
+		}
+		catch (Exception e) {
+
+			System.out.println("Find a studio element couldn't fpund");
+
+		}
 		Thread.sleep(5000);
-	    
-	    
-	}
+		
+		}
+
+
 
 	@When("^Verify that loaded page title contains Meetings Near You$")
 	public void verify_that_loaded_page_title_contains_Meetings_Near_You() throws Throwable {
@@ -80,14 +87,26 @@ public class Step_Def {
 	@When("^User enters zip code as \"([^\"]*)\" search for meetings In the search field$")
 	public void user_enters_zip_code_as_search_for_meetings_In_the_search_field(String arg1) throws Throwable {
 	   
-	    ob.getZipCode_Field().sendKeys(arg1);
-	}
+		try  { ob.getZipCode_Field().sendKeys(arg1);
 
-	
+	    	}
+		catch (Exception e) { System.out.println("Zipcode field couldn't found");
+			}
+
+	    }
+
 	@When("^Click on arrow Button$")
 	public void click_on_arrow_Button() throws Throwable {
-	    ob.getClick_on_arrow_Button().click();
-	    
+		
+		try {	ob.getClick_on_arrow_Button().click();
+		Thread.sleep(3000);
+		}
+
+		catch (Exception e) {
+
+		System.out.println("Arrow button couldn't found");
+		}
+
 	}
 
 	
@@ -107,11 +126,21 @@ public class Step_Def {
 	@When("^User click on the first search result$")
 	public void user_click_on_the_first_search_result() throws Throwable {
 		
-		ob.getfirst_search_result().click();
+		try {	  ob.getfirst_search_result().click();
+
+		}
+
+		
+
+		catch (Exception e) {
+
+			System.out.println("First search result element couldn't found");
+
+		}
 		System.out.println("" + '\n'+"==========================");
-		Thread.sleep(5000);
-	    
-	}
+
+		Thread.sleep(3000);    
+		}
 
 	@When("^User Verify that displayed location name matches with the name of the first searched$")
 	public void user_Verify_that_displayed_location_name_matches_with_the_name_of_the_first_searched() throws Throwable {
